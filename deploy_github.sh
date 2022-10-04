@@ -1,4 +1,4 @@
-rm -rf /dist
+rm -rf dist
 pnpm run build
 cd /dist
 git init
