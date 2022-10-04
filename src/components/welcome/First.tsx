@@ -9,7 +9,7 @@ export const First = defineComponent({
       <div class={s.wrapper}>
         <div class={s.card}>
           <img src={icon} />
-          <h2>我不只是一头猪<br />还是一头会省钱的猪</h2>
+          <h2>我不只是一头猪<br />我还是一头会省钱的猪</h2>
         </div>
         <div class={s.actions}>
           <span class={s.fake}>占位</span>
