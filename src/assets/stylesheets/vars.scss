@@ -1,4 +1,9 @@
 :root {
-	--welcome-card-bg: rgba(255,255,255,0.15);
-	--welcome-text: #fff;
+  --welcome-card-bg: rgba(255, 255, 255, 0.15);
+  --welcome-bg-start: #3a2d76;
+  --welcome-bg-end: #110b2e;
+  --welcome-text: #fff;
+  --welcome-nav-height: 67px;
+  --welcome-nav-gap: 20px;
+  --z-index-bottom: 10;
 }

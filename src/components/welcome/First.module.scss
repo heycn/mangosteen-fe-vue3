@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: var(--welcome-nav-gap);
   > .card {
     flex-grow: 1;
     display: flex;
@@ -11,27 +12,29 @@
     text-align: center;
     background: var(--welcome-card-bg);
     padding: 24px;
+    padding-bottom: -var(--welcome-nav-gap);
     border-radius: 10px;
     margin: 16px 16px 0 16px;
-    > img {
-      height: 128px;
-      margin-bottom: 24px;
-    }
-    > h2 {
-      line-height: 2.5rem;
-    }
+    > img { height: 128px; margin-bottom: 24px; }
+    > h2 { line-height: 2.5rem; }
   }
   > .actions {
-    & .fake {
-      visibility: hidden;
-    }
+    position: fixed;
+    z-index: var(--z-index-bottom);
+    left: 0;
+    bottom: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: var(--welcome-text);
-    font-family: OpenSans-Bold;
+    font-family: OpenSans;
+    height: var(--welcome-nav-height);
     font-size: 20px;
-    margin: 0 16px;
-    padding: 20px 0;
+    padding: 20px 16px;
+    background: var(--welcome-bg-end);
+    & .fake {
+      visibility: hidden;
+    }
   }
 }
