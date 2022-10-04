@@ -1,24 +1,27 @@
 .wrapper {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  background: #000;
-  color: #fff;
+  align-items: center;
+  background: linear-gradient(45deg, #110b2e 30%, #3a2d76 90%);
   > header {
     flex-shrink: 0;
     display: flex;
-		flex-direction: column;
-		border: 1px solid red;
-		> img{
-			height: 56px;
-		}
-		> h1 {
-			font-size: 1.5rem;
-			text-align: center;
-		}
+    flex-direction: column;
+    padding-top: 24px;
+    > img { height: 56px; }
+    > h1 {
+      font-size: 1.5rem;
+      padding-top: 8px;
+    }
   }
   > main {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 16px;
   }
   > footer {
     flex-shrink: 0;
