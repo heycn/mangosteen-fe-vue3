@@ -7,13 +7,12 @@ type Args = { Component: VNode; route: RouteLocationNormalizedLoaded }
 
 export const Welcome = defineComponent({
   setup: () => {
-    const main = ref<HTMLElement | null>(null)
+    const main = ref<HTMLElement>()
+    // const { direction } = useSwipe(main)
 
-    const { direction } = useSwipe(main)
-
-    watchEffect(() => {
-      console.log(direction.value)
-    })
+    // watchEffect(() => {
+    //   console.log(direction.value)
+    // })
 
     return () => (
       <div class={s.wrapper}>
