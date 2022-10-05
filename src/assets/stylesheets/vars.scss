@@ -1,5 +1,5 @@
 :root {
-  --welcome-card-bg: rgba(255, 255, 255, 0.20);
+  --welcome-card-bg: rgba(255, 255, 255, 0.2);
   --welcome-bg-start: #3a2d76;
   --welcome-bg-end: #110b2e;
   --welcome-text: #fff;
@@ -10,7 +10,7 @@
   --z-index-bottom: 10;
   --z-index-main: 1;
   --z-index-light: 0;
-	// --welcome-bg-start: #110b2e;
+  --transition-duration: 0.75s;
+  // --welcome-bg-start: #110b2e;
   // --welcome-bg-end: #06011c;
 }
-
