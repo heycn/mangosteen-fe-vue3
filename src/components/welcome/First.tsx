@@ -5,7 +5,7 @@ export const First = () => (
     <svg>
       <use xlinkHref='#welcome_1' />
     </svg>
-    <h2>别看我只是一头猪<br />我可是一头会省钱的猪</h2>
+    <h2>我不只是一头猪<br />我还是一头会省钱的猪</h2>
   </div>
 )
 
