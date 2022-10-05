@@ -7,7 +7,7 @@ export const Second = () => (
   <WelcomeLayout>
     {{
       icon: () => <img src={icon} />,
-      title: () => <h2>别看我只是一头猪<br />我可是一头会省钱的猪</h2>,
+      title: () => <h2>每日提醒<br />养成记账好习惯</h2>,
       buttons: () => <>
         <span class={s.fake}>占位</span>
         <RouterLink to='/welcome/3'>下一页</RouterLink>

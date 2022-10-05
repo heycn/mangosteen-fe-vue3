@@ -7,7 +7,7 @@ export const Third = () => (
   <WelcomeLayout>
     {{
       icon: () => <img src={icon} />,
-      title: () => <h2>别看我只是一头猪<br />我可是一头会省钱的猪</h2>,
+      title: () => <h2>可视化图表<br />每笔收支一目了然</h2>,
       buttons: () => <>
         <span class={s.fake}>占位</span>
         <RouterLink to='/welcome/4'>下一页</RouterLink>
