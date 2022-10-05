@@ -1,7 +1,6 @@
 import { defineComponent, Transition, VNode } from 'vue'
 import { RouteLocationNormalizedLoaded, RouterView } from 'vue-router'
 import s from './Welcome.module.scss'
-import logo from '../assets/icons/logo.svg'
 
 type Args = { Component: VNode; route: RouteLocationNormalizedLoaded }
 
@@ -10,7 +9,9 @@ export const Welcome = defineComponent({
     return () => (
       <div class={s.wrapper}>
         <header>
-          <img src={logo} />
+          <svg>
+            <use xlinkHref="#logo" />
+          </svg>
           <h1>Give My Money</h1>
         </header>
         <main>
