@@ -1,12 +1,14 @@
 .wrapper {
   position: relative;
   height: calc(100vh - var(--welcome-nav-height));
-  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: var(--welcome-nav-height);
-  background: linear-gradient( to bottom, var(--welcome-bg-start) 0%, var(--welcome-bg-end) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--welcome-bg-start) 0%,
+    var(--welcome-bg-end) 100%
+  );
   &::before {
     content: '';
     position: absolute;
@@ -40,18 +42,40 @@
     flex-direction: column;
     padding-top: 20px;
     z-index: var(--z-index-main);
-    > img { height: 72px; }
-    > h1 { font-size: 1.5rem; padding-top: 8px; }
+    > img {
+      height: 72px;
+    }
+    > h1 {
+      font-size: 1.5rem;
+      padding-top: 8px;
+    }
   }
   > main {
+    position: relative;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0 16px;
+    margin: 16px 16px var(--welcome-nav-gap);
     z-index: var(--z-index-main);
   }
   > footer {
     flex-shrink: 0;
   }
+}
+
+.slide_fade_enter_active,
+.slide_fade_leave_active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.75s ease-out;
+}
+
+.slide_fade_enter_from {
+  transform: translateX(100vw);
+}
+.slide_fade_leave_to {
+  transform: translateX(-100vw);
 }

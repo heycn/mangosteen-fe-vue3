@@ -1,0 +1,38 @@
+.card {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background: var(--welcome-card-bg);
+  padding: 24px;
+  padding-bottom: -var(--welcome-nav-gap);
+  border-radius: 10px;
+  > img {
+    height: 128px;
+    margin-bottom: 24px;
+  }
+  > h2 {
+    line-height: 2.5rem;
+  }
+}
+.actions {
+  position: fixed;
+  z-index: var(--z-index-bottom);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--welcome-text);
+  font-family: text;
+  height: var(--welcome-nav-height);
+  font-size: 20px;
+  padding: 20px 16px;
+  background: var(--welcome-bg-end);
+  > .fake {
+    visibility: hidden;
+  }
+}
