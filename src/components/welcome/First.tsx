@@ -17,5 +17,4 @@ export const First = () => (
   </WelcomeLayout> 
 )
 
-
 First.displayName = 'First'
