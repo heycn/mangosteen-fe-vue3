@@ -24,7 +24,7 @@ export const ItemCreate = defineComponent({
           icon: () => <Icon name='menu' class={s.icon} onClick={onClickMenu} />,
           default: () => (
             <>
-              <Tabs selected={kind.value} onUpdateSelected={name => kind.value = name}>
+              <Tabs selected={kind.value} v-model:selected={kind.value}>
                 <Tab name='支出'>icon 列表</Tab>
                 <Tab name='收入'>icon 列表2</Tab>
               </Tabs>
