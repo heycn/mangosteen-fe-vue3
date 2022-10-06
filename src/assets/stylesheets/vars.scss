@@ -8,12 +8,15 @@
   --welcome-nav-gap: 20px;
   --welcome-nav-gap: 20px;
   --z-index-bottom: 10;
-  --z-index-main: 1;
+  --z-index-main: 2;
   --z-index-light: 0;
+  --z-index-overlay: 20;
   --transition-duration: 0.75s;
   --button-text-color: #fff;
   --button-font-size: 18px;
   --border-radius: 100px;
   --button-height: 40px;
   --navbar-text: #fff;
+  --overlay-mask-bg: rgba(0, 0, 0, 0.5);
+  --overlay-bg: #000;
 }
