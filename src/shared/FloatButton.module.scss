@@ -1,0 +1,12 @@
+.button {
+  position: fixed;
+	display: flex;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(225deg, #8536df 0%, #570dd7 100%);
+  display: block;
+  padding: 6px;
+  border-radius: 50%;
+}
