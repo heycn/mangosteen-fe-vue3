@@ -9,7 +9,7 @@ import { Overlay } from '../shared/Overlay'
 
 export const StartPage = defineComponent({
   setup: (props, context) => {
-    const overlayVisible = ref(false)
+    const overlayVisible = ref(true)
 
     const onClick = () => {
       console.log('click')

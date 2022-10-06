@@ -11,7 +11,6 @@ export const Overlay = defineComponent({
   },
 
   setup: (props, context) => {
-
     return () => (
       <>
         <div class={s.mask} onClick={props.onClose}></div>

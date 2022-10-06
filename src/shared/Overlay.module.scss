@@ -12,8 +12,39 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 180px;
   height: 100%;
   z-index: calc(var(--z-index-overlay) + 1);
   background: var(--overlay-bg);
+
+  > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    > p {
+      margin-top: 0.2em;
+      font-size: 14px;
+    }
+  }
+
+  > nav {
+    padding-top: 24px;
+    > ul {
+      padding: 0 26px;
+      > li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1.2em 0;
+        font-family: 'title';
+        font-size: 16px;
+        > svg {
+          width: 1.8em;
+          height: 1.8em;
+          margin-right: 0.8em;
+        }
+      }
+    }
+  }
 }
