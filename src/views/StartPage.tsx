@@ -7,6 +7,7 @@ import { Icon } from '../shared/Icon'
 import { Navbar } from '../shared/Navbar'
 import { Overlay } from '../shared/Overlay'
 import { useRouter } from 'vue-router'
+import { MainLayout } from '../layouts/MainLayout'
 
 export const StartPage = defineComponent({
   setup: (props, context) => {
@@ -21,24 +22,26 @@ export const StartPage = defineComponent({
     }
 
     return () => (
-      <div>
-        <Navbar>
-          {{
-            default: () => 'Give My Money',
-            icon: () => <Icon name='menu' class={s.icon} onClick={onClickMenu} />
-          }}
-        </Navbar>
-        <Center class={s.logo_wrapper}>
-          <Icon name='logo' class={s.logo} />
-        </Center>
-        <div class={s.button_wrapper}>
-          <Button class={s.button} onClick={onClick}>
-            开始记账
-          </Button>
-        </div>
-        <FloatButton iconName='add' onClick={onClick} />
-        {overlayVisible.value && <Overlay onClose={() => (overlayVisible.value = false)} />}
-      </div>
+      <MainLayout>
+        {{
+          title: () => 'Give My Money',
+          icon: () => <Icon name='menu' class={s.icon} onClick={onClickMenu} />,
+          default: () => (
+            <>
+              <Center class={s.logo_wrapper}>
+                <Icon name='logo' class={s.logo} />
+              </Center>
+              <div class={s.button_wrapper}>
+                <Button class={s.button} onClick={onClick}>
+                  开始记账
+                </Button>
+              </div>
+              <FloatButton iconName='add' onClick={onClick} />
+              {overlayVisible.value && <Overlay onClose={() => (overlayVisible.value = false)} />}
+            </>
+          )
+        }}
+      </MainLayout>
     )
   }
 })
