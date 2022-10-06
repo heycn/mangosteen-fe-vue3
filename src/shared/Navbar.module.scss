@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--navbar-text);
+  padding: 16px;
+  .icon_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title_wrapper {
+    font-family: 'big-title';
+    font-size: 18px;
+  }
+  .fake {
+    visibility: hidden;
+  }
+}
