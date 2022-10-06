@@ -9,7 +9,7 @@ export const ForthActions: FunctionalComponent = () => {
   return (
     <div class={s.actions}>
       <button class={s.fake}>跳过</button>
-      <button onClick={() => replace('start')}>开始</button>
+      <button onClick={() => replace('/start')}>开始</button>
       <button class={s.fake}>跳过</button>
     </div>
   )

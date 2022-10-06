@@ -6,12 +6,11 @@ import { throttle } from '../shared/throttle'
 
 type Args = { Component: VNode; route: RouteLocationNormalizedLoaded }
 
-
 const pushMap: Record<string, string> = {
   'Welcome1': '/welcome/2',
   'Welcome2': '/welcome/3',
   'Welcome3': '/welcome/4',
-  'Welcome4': '/start',
+  'Welcome4': '/start'
 }
 
 export const Welcome = defineComponent({
