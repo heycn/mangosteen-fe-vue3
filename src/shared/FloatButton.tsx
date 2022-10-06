@@ -7,12 +7,16 @@ export const FloatButton = defineComponent({
     iconName: {
       type: String as PropType<string>,
       required: true
+    },
+    onClick: {
+      type: Function as PropType<() => void>,
+      required: true
     }
   },
 
   setup: (props, context) => {
     return () => (
-      <button class={s.button}>
+      <button class={s.button} onClick={props.onClick}>
         <Icon name={props.iconName} class={s.icon} />
       </button>
     )
