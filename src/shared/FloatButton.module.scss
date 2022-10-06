@@ -1,6 +1,6 @@
 .button {
   position: fixed;
-	display: flex;
+  display: flex;
   bottom: 24px;
   right: 24px;
   width: 56px;
@@ -9,4 +9,8 @@
   display: block;
   padding: 6px;
   border-radius: 50%;
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
 }

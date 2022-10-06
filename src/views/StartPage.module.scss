@@ -7,3 +7,11 @@
     padding: 24px;
   }
 }
+
+.logo {
+  width: 128px;
+  height: 128px;
+  &_wrapper {
+    padding: 88px 0;
+  }
+}
