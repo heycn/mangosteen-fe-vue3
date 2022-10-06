@@ -1,10 +1,30 @@
 .wrapper {
   background: var(--inputPad-bg);
-  border-radius: 16px 16px 0 0;
+  border-radius: 14px 14px 0 0;
 }
 
-.notes {
+.dateAntAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid var(--inputPad-bg);
+  padding: 12px;
+  .date {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    > svg {
+      width: 2em;
+      height: 2em;
+      margin-right: 1em;
+    }
+  }
+  .amount {
+    font-size: 24px;
+    font-family: monospace;
+    color: var(--amount-color);
+  }
 }
 
 .buttons {
@@ -23,8 +43,8 @@
     &:nth-child(15),
     &:nth-child(16) {
       height: calc(56px + 20px);
-			padding-bottom: 20px;
-			border-bottom: 0;
+      padding-bottom: 20px;
+      border-bottom: 0;
     }
   }
 }
