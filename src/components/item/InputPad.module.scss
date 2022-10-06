@@ -1,0 +1,30 @@
+.wrapper {
+  background: var(--inputPad-bg);
+  border-radius: 16px 16px 0 0;
+}
+
+.notes {
+  border-bottom: 1px solid var(--inputPad-bg);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  > button {
+    width: 25%;
+    height: 56px;
+    border-right: 1px solid var(--inputPad-bg);
+    border-bottom: 1px solid var(--inputPad-bg);
+    &:nth-child(4n) {
+      border-right: 0;
+    }
+    &:nth-child(13),
+    &:nth-child(14),
+    &:nth-child(15),
+    &:nth-child(16) {
+      height: calc(56px + 20px);
+			padding-bottom: 20px;
+			border-bottom: 0;
+    }
+  }
+}

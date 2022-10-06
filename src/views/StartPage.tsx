@@ -4,7 +4,6 @@ import s from './StartPage.module.scss'
 import { FloatButton } from '../shared/FloatButton'
 import { Center } from '../shared/Center'
 import { Icon } from '../shared/Icon'
-import { Navbar } from '../shared/Navbar'
 import { Overlay } from '../shared/Overlay'
 import { useRouter } from 'vue-router'
 import { MainLayout } from '../layouts/MainLayout'
@@ -24,7 +23,7 @@ export const StartPage = defineComponent({
     return () => (
       <MainLayout>
         {{
-          title: () => 'Give My Money',
+          title: () => '我的记账本',
           icon: () => <Icon name='menu' class={s.icon} onClick={onClickMenu} />,
           default: () => (
             <>
