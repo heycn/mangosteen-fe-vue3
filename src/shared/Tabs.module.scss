@@ -1,8 +1,33 @@
 .tabs {
   &_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
     > li {
+      flex-grow: 1;
+      flex-shrink: 0;
+      text-align: center;
+      padding-bottom: 12px;
+      font-size: 18px;
       &.selected {
-        background: red;
+        position: relative;
+        font-family: 'title';
+        background: linear-gradient(133deg, #ffffff 0%, #7daefd 38%, #d400ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &::before {
+          content: '';
+          display: block;
+          left: 25%;
+          width: 50%;
+          height: 6px;
+          background: #fff;
+          position: absolute;
+          bottom: 0;
+          background: linear-gradient(133deg, #5de4ff 0%, #649af3 38%, #ae2ef8 100%);
+          border-radius: 3px;
+        }
       }
     }
   }
