@@ -28,10 +28,11 @@
   justify-content: space-between;
   color: var(--welcome-text);
   font-family: text;
-  height: var(--welcome-nav-height);
-  font-size: 20px;
+  height: calc(var(--welcome-nav-height) + var(--welcome-nav-gap));
+  font-size: 22px;
   padding: 20px 16px;
   background: var(--welcome-bg-end);
+  font-family: 'big-title';
   > .fake {
     visibility: hidden;
   }
