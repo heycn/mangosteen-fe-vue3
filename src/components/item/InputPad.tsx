@@ -22,17 +22,26 @@ export const InputPad = defineComponent({
       hideDatePicker()
     }
     const refAmount = ref('0')
+
     const appendText = (n: number | string) => {
       const nString = n.toString()
       const dotIndex = refAmount.value.toString().indexOf('.')
 
-      if (refAmount.value.length >= 13) return
-      if (dotIndex >= 0 && refAmount.value.length - dotIndex > 2) return // 大于两位小数
+      if (refAmount.value.length >= 13) {
+        return
+      }
+      if (dotIndex >= 0 && refAmount.value.length - dotIndex > 2) { // 大于两位小数
+        return
+      }
       if (nString === '.') {
-        if (dotIndex >= 0) return // 已经有小数点了
+        if (dotIndex >= 0) { // 已经有小数点了
+          return
+        }
       } else if (nString === '0') {
         if (dotIndex === -1) { // 没有小数点
-          if (refAmount.value === '0') return // 没小数点，但是有0
+          if (refAmount.value === '0') { // 没小数点，但是有0
+            return
+          }
         }
       } else {
         if (refAmount.value === '0') refAmount.value = '' // 正好是0
