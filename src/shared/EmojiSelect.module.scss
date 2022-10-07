@@ -1,6 +1,7 @@
 .emojiList {
   flex-grow: 1;
-  border: 1px solid var(--input-border-color);
+  // border: 1px solid var(--input-border-color);
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: var(--input-radius);
   background: var(--inputPad-bg);
   font-size: 18px;
