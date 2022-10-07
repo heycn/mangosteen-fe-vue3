@@ -40,7 +40,7 @@
     'n7 n8 n9 s'
     'n0 n0 nd s';
   grid-auto-rows: 56px;
-  padding-bottom: 20px;
+  padding-bottom: 26px;
   grid-auto-columns: 1fr;
   font-family: text;
 
@@ -94,22 +94,25 @@
 
     &:nth-child(12) {
       grid-area: d;
+      > svg {
+        width: 2em;
+        height: 2em;
+      }
     }
 
     &:nth-child(13) {
       grid-area: s;
-    }
-
-    &:nth-child(11),
-    &:nth-child(10) {
-      height: calc(56px + 20px);
-      border-bottom: none;
-    }
-
-    &:nth-child(13) {
-      height: calc(56px * 2 + 20px);
+      height: calc(56px * 2 + 26px);
       border-bottom: none;
       background: var(--button-bg-important);
+      font-size: 24px;
+    }
+
+    &:nth-child(10),
+    &:nth-child(11) {
+      height: calc(56px + 26px);
+      border-bottom: none;
+      font-size: 24px;
     }
   }
 }

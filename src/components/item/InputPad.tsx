@@ -21,8 +21,24 @@ export const InputPad = defineComponent({
       refDate.value = date
       hideDatePicker()
     }
-    const refAmount = ref('')
-    const appendText = (n: number | string) => (refAmount.value += n.toString())
+    const refAmount = ref('0')
+    const appendText = (n: number | string) => {
+      const nString = n.toString()
+      const dotIndex = refAmount.value.toString().indexOf('.')
+
+      if (refAmount.value.length >= 13) return
+      if (dotIndex >= 0 && refAmount.value.length - dotIndex > 2) return // 大于两位小数
+      if (nString === '.') {
+        if (dotIndex >= 0) return // 已经有小数点了
+      } else if (nString === '0') {
+        if (dotIndex === -1) { // 没有小数点
+          if (refAmount.value === '0') return // 没小数点，但是有0
+        }
+      } else {
+        if (refAmount.value === '0') refAmount.value = '' // 正好是0
+      }
+      refAmount.value += n.toString()
+    }
 
     const buttons = [
       { text: '1', onClick: () => appendText(1) },
@@ -36,8 +52,11 @@ export const InputPad = defineComponent({
       { text: '9', onClick: () => appendText(9) },
       { text: '.', onClick: () => appendText('.') },
       { text: '0', onClick: () => appendText(0) },
-      { text: '清空', onClick: () => appendText('') },
-      { text: '提交', onClick: () => {} }
+      {
+        text: <svg><use xlinkHref='#clear'></use></svg>,
+        onClick: () => (refAmount.value = '0')
+      },
+      { text: 'OK', onClick: () => {} }
     ]
 
     return () => (
