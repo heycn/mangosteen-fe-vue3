@@ -28,18 +28,15 @@ export const InputPad = defineComponent({
       { text: '1', onClick: () => appendText(1) },
       { text: '2', onClick: () => appendText(2) },
       { text: '3', onClick: () => appendText(3) },
-      { text: '清空', onClick: () => appendText('') },
       { text: '4', onClick: () => appendText(4) },
       { text: '5', onClick: () => appendText(5) },
       { text: '6', onClick: () => appendText(6) },
-      { text: '+', onClick: () => {} },
       { text: '7', onClick: () => appendText(7) },
       { text: '8', onClick: () => appendText(8) },
       { text: '9', onClick: () => appendText(9) },
-      { text: '-', onClick: () => {} },
       { text: '.', onClick: () => appendText('.') },
       { text: '0', onClick: () => appendText(0) },
-      { text: '删', onClick: () => {} },
+      { text: '清空', onClick: () => appendText('') },
       { text: '提交', onClick: () => {} }
     ]
 
