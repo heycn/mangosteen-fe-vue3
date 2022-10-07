@@ -36,24 +36,32 @@
   }
 }
 .formLabel {
+  .nameWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    > span {
+      margin-right: 1em;
+    }
+  }
 }
 .formItem {
   min-height: var(--input-min-height);
   max-width: 100%;
   &.input {
     flex-grow: 1;
-    border: 1px solid var(--input-border-color);
     border-radius: var(--input-radius);
     font-size: 18px;
     font-family: inherit;
     padding-left: 16px;
     padding-right: 16px;
-    box-shadow: inset 0 0 3px var(--input-shadow);
+    background: var(--inputPad-bg);
+    font-family: 'text';
     &.error {
-      border-color: var(--error-color);
     }
   }
   &_name {
+    font-family: 'text';
   }
   &_value {
     display: flex;
@@ -62,6 +70,8 @@
   &_errorHint {
     margin-top: 4px;
     color: var(--error-color);
-    font-size: 12px;
+    font-size: 14px;
+    font-family: 'text';
+    text-align: center;
   }
 }
