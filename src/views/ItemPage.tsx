@@ -3,7 +3,7 @@ import { RouterView } from 'vue-router'
 import s from './ItemPage.module.scss'
 
 export const ItemPage = defineComponent({
-	setup: () => {
-		return () => (<RouterView />)
-	}
+  setup: () => {
+    return () => (<RouterView />)
+  }
 })

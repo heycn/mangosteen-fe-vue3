@@ -5,7 +5,11 @@ export const Third = () => (
     <svg>
       <use xlinkHref='#welcome_3' />
     </svg>
-    <h2>可视化图表<br />收入支出一目了然</h2>
+    <h2>
+      可视化图表
+      <br />
+      收入支出一目了然
+    </h2>
   </div>
 )
 

@@ -24,12 +24,16 @@ export const EmojiSelect = defineComponent({
     const emojis = computed(() => {
       const selectedItem = table[refSelected.value][1]
       return selectedItem.map(category =>
-        emojiList.find(item => item[0] === category)
-          ?.[1]
-          .map(item => <li  class={item === props.modelValue ? s.selectedEmoji : ''} onClick={() => selectEmoji(item)}>{item}</li>)
+        emojiList
+          .find(item => item[0] === category)?.[1]
+          .map(item => (
+            <li class={item === props.modelValue ? s.selectedEmoji : ''} onClick={() => selectEmoji(item)}>
+              {item}
+            </li>
+          ))
       )
     })
-    const selectCategory = (index: number) => refSelected.value = index
+    const selectCategory = (index: number) => (refSelected.value = index)
     const selectEmoji = (emoji: string) => context.emit('update:modelValue', emoji)
 
     return () => (
