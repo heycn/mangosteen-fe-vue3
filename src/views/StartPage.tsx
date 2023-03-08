@@ -1,46 +1,42 @@
-import { defineComponent, ref } from 'vue'
-import { Button } from '../shared/Button'
-import s from './StartPage.module.scss'
-import { FloatButton } from '../shared/FloatButton'
-import { Center } from '../shared/Center'
-import { Icon } from '../shared/Icon'
-import { Overlay } from '../shared/Overlay'
-import { useRouter } from 'vue-router'
-import { MainLayout } from '../layouts/MainLayout'
-
+import { defineComponent, ref } from 'vue';
+import { RouterLink } from 'vue-router';
+import { MainLayout } from '../layouts/MainLayout';
+import { Button } from '../shared/Button';
+import { Center } from '../shared/Center';
+import { FloatButton } from '../shared/FloatButton';
+import { Icon } from '../shared/Icon';
+import { Navbar } from '../shared/Navbar';
+import { Overlay } from '../shared/Overlay';
+import s from './StartPage.module.scss';
 export const StartPage = defineComponent({
   setup: (props, context) => {
-    const overlayVisible = ref(false)
-    const router = useRouter()
-    const replace = (to: string) => router.replace(to)
-    const onClick = () => {
-      replace('/items/create')
-    }
+    const refOverlayVisible = ref(false)
     const onClickMenu = () => {
-      overlayVisible.value = !overlayVisible.value
+      refOverlayVisible.value = !refOverlayVisible.value
     }
-
     return () => (
-      <MainLayout>
-        {{
-          title: () => '我的记账本',
-          icon: () => <Icon name='menu' class={s.icon} onClick={onClickMenu} />,
-          default: () => (
-            <>
-              <Center class={s.logo_wrapper}>
-                <Icon name='logo' class={s.logo} />
-              </Center>
-              <div class={s.button_wrapper}>
-                <Button class={s.button} onClick={onClick}>
-                  开始记账
-                </Button>
-              </div>
-              <FloatButton iconName='add' onClick={onClick} />
-              {overlayVisible.value && <Overlay onClose={() => (overlayVisible.value = false)} />}
-            </>
-          )
-        }}
-      </MainLayout>
+      <MainLayout>{
+        {
+          title: () => '山竹记账',
+          icon: () => <Icon name="menu" class={s.navIcon} onClick={onClickMenu} />,
+          default: () => <>
+            <Center class={s.pig_wrapper}>
+              <Icon name="pig" class={s.pig} />
+            </Center>
+            <div class={s.button_wrapper}>
+              <RouterLink to="/items/create">
+                <Button class={s.button}>开始记账</Button>
+              </RouterLink>
+            </div>
+            <RouterLink to="/items/create">
+              <FloatButton iconName='add' />
+            </RouterLink>
+            {refOverlayVisible.value &&
+              <Overlay onClose={() => refOverlayVisible.value = false} />
+            }
+          </>
+        }
+      }</MainLayout>
     )
   }
 })

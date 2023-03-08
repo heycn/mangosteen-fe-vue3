@@ -1,22 +1,21 @@
 .button {
   width: 100%;
-  height: 56px;
-  font-family: 'big-title';
-  font-size: 24px;
   &_wrapper {
-    padding: 18px;
+    padding: 16px 16px;
   }
 }
 
-.logo {
+.pig{
   width: 128px;
   height: 128px;
-  &_wrapper {
-    padding: 72px 0;
+  &_wrapper{
+    padding: 120px 0;
   }
 }
 
-.icon {
-  width: 2em;
-  height: 2em;
+.navIcon{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 2px;
 }

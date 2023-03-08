@@ -1,16 +1,13 @@
-import s from './welcome.module.scss'
+import s from './welcome.module.scss';
+import { FunctionalComponent } from 'vue';
 
-export const Second = () => (
-  <div class={s.card}>
+export const Second: FunctionalComponent = () => {
+  return <div class={s.card}>
     <svg>
-      <use xlinkHref='#welcome_2' />
+      <use xlinkHref='#clock'></use>
     </svg>
-    <h2>
-      每日提醒
-      <br />
-      养成记账好习惯
-    </h2>
+    <h2>每日提醒<br />不遗漏每一笔账单</h2>
   </div>
-)
+}
 
 Second.displayName = 'Second'

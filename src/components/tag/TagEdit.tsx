@@ -1,11 +1,13 @@
-import { defineComponent, PropType } from 'vue'
-
+import { defineComponent, PropType } from 'vue';
 export const TagEdit = defineComponent({
-	setup: () => {
-		return () => (
-			<div>
-				TagEdit 
-			</div>
-		)
-	}
+  props: {
+    name: {
+      type: String as PropType<string>
+    }
+  },
+  setup: (props, context) => {
+    return () => (
+      <div>edit</div>
+    )
+  }
 })

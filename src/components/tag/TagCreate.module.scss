@@ -1,22 +1,4 @@
-.icon {
-  width: 2em;
-  height: 2em;
-}
-
-.navBar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.4em 1em;
-  border: 1px solid red;
-  .back {
-    width: 1em;
-    height: 1em;
-    margin-right: 1em;
-  }
-}
-
-.tips {
+.tips{
   text-align: center;
   padding: 16px 0;
 }
@@ -25,43 +7,30 @@
 }
 .formRow {
   margin-top: 8px;
-  .buttonWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    .confirm {
-      padding: 8px 48px;
-      font-size: 16px;
-    }
-  }
 }
 .formLabel {
-  .nameWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    > span {
-      margin-right: 1em;
-    }
-  }
 }
 .formItem {
   min-height: var(--input-min-height);
   max-width: 100%;
+  &.button{
+    width: 100%;
+  }
   &.input {
     flex-grow: 1;
+    border: 1px solid var(--input-border-color);
     border-radius: var(--input-radius);
     font-size: 18px;
     font-family: inherit;
     padding-left: 16px;
     padding-right: 16px;
-    background: var(--inputPad-bg);
-    font-family: 'text';
+    box-shadow: inset 0 0 3px var(--input-shadow);
     &.error {
+      border-color: var(--error-color);
     }
   }
+  
   &_name {
-    font-family: 'text';
   }
   &_value {
     display: flex;
@@ -70,8 +39,7 @@
   &_errorHint {
     margin-top: 4px;
     color: var(--error-color);
-    font-size: 14px;
-    font-family: 'text';
-    text-align: center;
+    font-size: 12px;
   }
 }
+

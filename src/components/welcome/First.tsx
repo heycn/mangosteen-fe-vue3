@@ -1,16 +1,14 @@
-import s from './welcome.module.scss'
-
-export const First = () => (
-  <div class={s.card}>
-    <svg>
-      <use xlinkHref='#welcome_1' />
-    </svg>
-    <h2>
-      我不只是一头猪
-      <br />
-      我还是一头会省钱的猪
-    </h2>
-  </div>
-)
+import s from './welcome.module.scss';
+import { FunctionalComponent } from 'vue';
+export const First: FunctionalComponent = () => {
+  return (
+    <div class={s.card}>
+      <svg>
+        <use xlinkHref='#pig'></use>
+      </svg>
+      <h2>会挣钱<br />还会省钱</h2>
+    </div>
+  )
+}
 
 First.displayName = 'First'

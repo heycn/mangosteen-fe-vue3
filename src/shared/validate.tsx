@@ -1,7 +1,6 @@
 interface FData {
   [k: string]: string | number | null | undefined | FData
 }
-
 type Rule<T> = {
   key: keyof T
   message: string
@@ -10,9 +9,7 @@ type Rule<T> = {
     { type: 'pattern', regex: RegExp }
   )
 type Rules<T> = Rule<T>[]
-
 export type { Rules, Rule, FData }
-
 export const validate = <T extends FData>(formData: T, rules: Rules<T>) => {
   type Errors = {
     [k in keyof T]?: string[]

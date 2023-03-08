@@ -1,6 +1,4 @@
-# keeping-book - 我的全栈项目
-
-> Vue3 + TSX + Ruby on Rails
+# 我的 Vue 3 + TSX 项目
 
 ## 编码规范
 
@@ -9,13 +7,13 @@
 推荐使用
 
 ```tsx
-const div = ref<HTMLDivElement>()
+const div = ref<HTMLDivElement>();
 ```
 
 不推荐使用
 
 ```tsx
-const div = ref<HTMLDivElement | null>(null)
+const div = ref<HTMLDivElement | null>(null);
 ```
 
 ## 如何开发

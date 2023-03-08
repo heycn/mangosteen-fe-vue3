@@ -1,12 +1,15 @@
-export const throttle = <T extends (...args: any[]) => any>(fn: T, delay: number) => {
-  let timer: number | undefined
+export const throttle = <T extends ((...args: unknown[]) => any)>(fn: T, time: number) => {
+  let timer: number | undefined = undefined
   let result: ReturnType<T>
   return (...args: Parameters<T>) => {
-    if (timer) return
-    fn(...args)
-    timer = setTimeout(() => {
-      timer = undefined
-    }, delay)
-    return result
+    if (timer) {
+      return result
+    } else {
+      result = fn(...args)
+      timer = setTimeout(() => {
+        timer = undefined
+      }, time)
+      return result
+    }
   }
 }
