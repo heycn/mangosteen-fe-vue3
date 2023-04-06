@@ -61,7 +61,7 @@ const mock = (response: AxiosResponse) => {
   return false
 }
 
-export const http = new Http('/api/v1')
+export const http = new Http('http://120.77.217.225:3000/api/v1')
 
 http.instance.interceptors.request.use(config => {
   const jwt = localStorage.getItem('jwt')
