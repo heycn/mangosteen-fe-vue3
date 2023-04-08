@@ -75,6 +75,7 @@ http.instance.interceptors.request.use(config => {
   }
   if(config._autoLoading === true){
     Toast.loading({
+    
       message: '加载中...',
       forbidClick: true,
       duration: 0
