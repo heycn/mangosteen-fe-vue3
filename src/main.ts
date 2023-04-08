@@ -6,7 +6,6 @@ import { createRouter } from 'vue-router'
 import { history } from './shared/history';
 import '@svgstore';
 import { createPinia, storeToRefs } from 'pinia';
-import { Dialog } from 'vant';
 
 
 const router = createRouter({ history, routes })
@@ -44,3 +43,4 @@ router.beforeEach((to, from) => {
     () => '/sign_in?return_to=' + from.path
   )
 })
+
